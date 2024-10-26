@@ -24,6 +24,12 @@ main{
 
     padding: 5rem 3rem;
     height: 100%;
+
+    position: relative;
+}
+
+button{
+    cursor: pointer;
 }
 
 .header{
@@ -63,7 +69,7 @@ main{
     font-size: 10rem;
 }
 
-.rules{
+.rules-btn{
     justify-self: end;
     background-color: transparent;
     border: 1px solid hsl(217, 16%, 45%);
@@ -75,14 +81,73 @@ main{
 }
 
 .playground{
+    height: 100%;
+    width: 100%;
+    /* text-align: center; */
+}
+
+#before-choice{
     display: grid;
     justify-items: center;
     align-items: center;
 
-    > *{
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
+    display: none;
+}
+
+#after-choice{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+
+
+    /* height: min-content; */
+
+    /* display: none; */
+}
+
+.after-choice-container{
+
+    height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.after-choice-heading{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.result-container{
+    text-align: center;
+}
+
+.result{
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.play-again{
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+
+.playground-bg, .options-container{
+    grid-row: 1/2;
+    grid-column: 1/2;
 }
 
 .options-container{
@@ -99,6 +164,9 @@ main{
 .spock{
     grid-column: 2/3;
     grid-row: 2/3;
+}
+
+.translate-spock{
     transform: translateX(-4rem) translateY(-4rem);
 }
 
@@ -115,20 +183,31 @@ main{
 .paper{
     grid-row: 2/3;
     grid-column: 4/5;
+}
+
+.translate-paper{
     transform: translateX(4rem) translateY(-4rem);
 }
 
+.option{
+    width: 5rem;
+    height: 5rem;
+}
 
 .option-bg{
     background-color: hsl(0, 0%, 100%);
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .option-gradient-bg{
     padding: 2rem;
     border-radius: 50%;
     width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .option-gradient-bg.lizard{
@@ -151,6 +230,44 @@ main{
     background-image: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
 }   
 
+
+.rules-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsla(0, 0%, 0%, 0.466);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules-container{
+    background-color: hsl(0, 0%, 100%);
+    padding: 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 5rem hsla(0, 0%, 0%, 0.568);
+}
+
+.rules-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.rules-heading{
+    color: hsl(229, 25%, 31%);
+    font-size: 3.2rem;
+}
+
+.close-icon{
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+}
 
 @media (max-width: 645px) {
     .header{

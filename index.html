@@ -44,46 +44,85 @@
 
     <section class="playground">
 
-      <div class="playground-bg">
-        <img src="images/bg-pentagon.svg" alt="">
+      <div id="before-choice">
+        <div class="playground-bg">
+          <img src="images/bg-pentagon.svg" alt="">
+        </div>
+  
+        <div class="options-container">
+          <div class="option-gradient-bg lizard">
+            <div class="option-bg">
+              <img src="images/icon-lizard.svg" alt="" class="option">
+            </div>
+          </div>
+  
+          <div class="option-gradient-bg translate-paper paper">
+            <div class="option-bg">
+              <img src="images/icon-paper.svg" alt="" class="option">
+            </div>
+          </div>
+  
+          <div class="option-gradient-bg rock">
+            <div class="option-bg">
+              <img src="images/icon-rock.svg" alt="" class="option">
+            </div>
+          </div>
+  
+          <div class="option-gradient-bg scissors">
+            <div class="option-bg">
+              <img src="images/icon-scissors.svg" alt="" class="option">
+            </div>
+          </div>
+  
+          <div class="option-gradient-bg spock translate-spock">
+            <div class="option-bg">
+              <img src="images/icon-spock.svg" alt="" class="option">
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="options-container">
-        <div class="option-gradient-bg lizard">
-          <div class="option-bg">
-            <img src="images/icon-lizard.svg" alt="" class="option">
+      <div id="after-choice">
+        <div class="after-choice-container">
+          <h2 class="after-choice-heading">you picked</h2>
+          <div class="option-gradient-bg spock user-choice">
+            <div class="option-bg">
+              <img src="images/icon-spock.svg" alt="" class="option">
+            </div>
           </div>
         </div>
 
-        <div class="option-gradient-bg paper">
-          <div class="option-bg">
-            <img src="images/icon-paper.svg" alt="" class="option">
-          </div>
+        <div class="result-container">
+          <h1 class="result">you lose</h1>
+          <button class="play-again">play again</button>
         </div>
 
-        <div class="option-gradient-bg rock">
-          <div class="option-bg">
-            <img src="images/icon-rock.svg" alt="" class="option">
-          </div>
-        </div>
-
-        <div class="option-gradient-bg scissors">
-          <div class="option-bg">
-            <img src="images/icon-scissors.svg" alt="" class="option">
-          </div>
-        </div>
-
-        <div class="option-gradient-bg spock">
-          <div class="option-bg">
-            <img src="images/icon-spock.svg" alt="" class="option">
+        <div class="after-choice-container">
+          <h2 class="after-choice-heading">the house picked</h2>
+          <div class="option-gradient-bg rock house-choice">
+            <div class="option-bg">
+              <img src="images/icon-rock.svg" alt="" class="option">
+            </div>
           </div>
         </div>
       </div>
       
     </section>
 
-    <button class="rules">RULES</button>
+    <button class="rules-btn">RULES</button>
+
+    <section class="rules-bg">
+     <div class="rules-container">
+      <div class="rules-header">
+        <h2 class="rules-heading">RULES</h2>
+        <img src="images/icon-close.svg" alt="" class="close-icon">
+      </div>
+      <img src="images/image-rules-bonus.svg" alt="">
+     </div>
+    </section>
   </main>
+
+  
 
 
   <script src="index.js"></script>
