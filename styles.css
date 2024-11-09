@@ -12,7 +12,7 @@ body{
     height: 100vh;
     background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     color: hsl(0, 0%, 100%);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 main{
@@ -44,6 +44,7 @@ img{
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .choice{
@@ -54,12 +55,13 @@ img{
 
 .score-container{
     background-color: hsl(0, 0%, 100%);
-    width: 20rem;
+    width: 16rem;
+    height: 100%;
     border-radius: 2rem;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    justify-items: center;
     align-items: center;
 }
 
@@ -70,7 +72,7 @@ img{
 
 .score{
     color: hsl(229, 25%, 31%);
-    font-size: 10rem;
+    font-size: 9rem;
 }
 
 .rules-btn{
@@ -94,6 +96,7 @@ img{
     justify-items: center;
     align-items: center;
 
+    height: 100%;
 }
 
 #after-choice{
@@ -141,6 +144,9 @@ img{
     padding: 1rem 2rem;
     text-transform: uppercase;
     font-size: 1.5rem;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
 }
 
 
@@ -155,8 +161,22 @@ img{
     grid-template-rows: repeat(3, 1fr);
 }
 
+.options-container > :nth-child(1){
+    transform: translateX(-1rem) translateY(3rem);
+}
+
 .options-container > :nth-child(2){
     transform: translateX(4rem) translateY(-4rem);
+}
+
+.options-container > :nth-child(3){
+    transform: translateX(1rem) translateY(3rem);
+}
+
+
+
+.options-container > :nth-child(4){
+    transform: translateY(-4rem);
 }
 
 .options-container > :last-child{
@@ -255,6 +275,7 @@ img{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .rules-heading{
@@ -268,10 +289,13 @@ img{
     cursor: pointer;
 }
 
-@media (max-width: 645px) {
+@media (max-width: 750px){
     .header{
         width: 100%;
     }
+}
+
+@media (max-width: 645px) {
 
     .choice{
         font-size: 2rem;
@@ -288,4 +312,24 @@ img{
     .rules{
         justify-self: center;
     }
+}
+
+
+@media (max-width: 450px) {
+    .rules-container{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .rules-header{
+        margin-bottom: 5rem;
+    }
+    
+    
 }

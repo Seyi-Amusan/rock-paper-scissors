@@ -4,10 +4,17 @@ const playGround = document.querySelector('#before-choice')
 const resultGround = document.querySelector('#after-choice')
 const userChoiceContainer = document.querySelector('.user-choice')
 const houseChoiceContainer = document.querySelector('.house-choice')
-let result = document.querySelector('.result')
-let score = document.querySelector('.score')
+const result = document.querySelector('.result')
+const score = document.querySelector('.score')
 let userChoice, houseChoice = null
 
+const rules = {
+    rock: ['lizard', 'scissors'],
+    paper: ['rock', 'spock'],
+    scissors: ['paper', 'lizard'],
+    spock: ['scissors', 'rock'],
+    lizard: ['spock', 'paper'],
+}
 
 const getHouseChoice = () => {
     let randomNumber = Math.floor(Math.random() * 5);
@@ -15,15 +22,18 @@ const getHouseChoice = () => {
 }
 
 const displayResult = (userChoice, houseChoice) => {
-    if (userChoice.querySelector('div img').src == houseChoice.querySelector('div img').src) {
+    
+    if (rules[userChoice.id].includes(houseChoice.id)) {
         result.textContent = 'you win'
         score.textContent = parseInt(score.textContent) + 1
     } else {
         result.textContent = 'you lose'
+
         if (parseInt(score.textContent) > 0) {
             score.textContent = parseInt(score.textContent) - 1
         }
     }
+    
     return
 }
 
