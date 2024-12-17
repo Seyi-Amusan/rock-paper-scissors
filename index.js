@@ -53,7 +53,7 @@ for (const option of options) {
 
         //display result ground
         playGround.style.display = 'none'
-        resultGround.style.display = 'flex'
+        resultGround.style.display = 'grid'
 
         displayResult(userChoice, houseChoice)
         
